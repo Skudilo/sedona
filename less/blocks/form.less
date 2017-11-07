@@ -1,0 +1,165 @@
+.form__fieldset-name {
+  border: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.form__name-item {
+  display: flex;
+  align-items: center;
+}
+
+.form__fieldset-title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form__label {
+  text-transform: uppercase;
+}
+
+.form__name-input {
+  flex-grow: 1;
+  border: none;
+  background-color: #f2f2f2;
+  height: 58px;
+  padding: 22px;
+  margin-left: 15px;
+}
+
+//
+
+.form__fieldset-contacts {
+  border: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.form__contacts-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__contacts-input {
+  border: none;
+  background-color: #f2f2f2;
+  height: 58px;
+  padding: 22px;
+}
+
+//
+
+.form__fieldset-impression {
+  border: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.form__impression-item {
+  position: relative;
+  min-height: 60px;
+  padding-top: 15px
+}
+
+.form__impression-input {
+  display: none;
+}
+
+.form__impression-label {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-left: 80px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+  }
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 17px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #333333;
+  }
+}
+
+.form__impression-input:checked + .form__impression-label::after {
+  display: block
+}
+
+//
+
+.form__fieldset-places {
+  border: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.form__places-item {
+  position: relative;
+  min-height: 60px;
+  padding-top: 15px
+}
+
+.form__places-input {
+  display: none;
+}
+
+.form__places-label {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-left: 80px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 55px;
+    height: 55px;
+    border-radius: 3px;
+    background-color: #e5e5e5;
+  }
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 20px;
+    width: 25px;
+    height: 19px;
+    background: url(../img/check.png) no-repeat center;
+  }
+}
+
+.form__places-input:checked + .form__places-label::after {
+  display: block;
+}
+
+//
+
+.form__fieldset-describe {
+  border: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.form__describe__textarea {
+  border: none;
+  background-color: #e5e5e5;
+  width: 100%;
+  padding: 22px;
+}
