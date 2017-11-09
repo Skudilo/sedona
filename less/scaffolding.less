@@ -1,14 +1,16 @@
 @font-face {
-  font-family: "PT Sans";
   font-weight: normal;
+  font-family: "PT Sans";
   font-style: normal;
+
   src: url("fonts/ptsans.woff2") format("woff2"), url("fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
-  font-family: "PT Sans";
   font-weight: bold;
+  font-family: "PT Sans";
   font-style: normal;
+
   src: url("fonts/ptsansbold.woff2") format("woff2"), url("fonts/ptsansbold.woff") format("woff");
 }
 
@@ -17,21 +19,24 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
-  color:  #333333;
+  font-family: "PT Sans", sans-serif;
+  color: #333333;
 }
 
 .visually-hidden {
-	position: absolute;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	width: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
 }
 
 * {
@@ -48,20 +53,24 @@ a {
 }
 
 ul {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .btn {
   display: block;
   width: 280px;
   height: 60px;
-  color: #ffffff;
-  background-color: #81b3d2;
-  font-size: 21px;
-  text-transform: uppercase;
-  font-weight: bold;
-  line-height: 60px;
   margin: 0 auto;
+
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 60px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #81b3d2;
+  border: none;
 }

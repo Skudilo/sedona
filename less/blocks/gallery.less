@@ -1,34 +1,47 @@
 .gallery {
-    width: 320px;
-    margin: 0 auto;
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 30px
 }
 
 .gallery__title-wrap {
-  padding: 30px 25px;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+
   text-align: center;
   text-transform: uppercase;
+
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .gallery__title {
+  margin-bottom: 25px;
+
+  font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  font-weight: bold;
+}
+
+.gallery__title-text {
+  line-height: 24px
 }
 
 .gallery__post {
-  padding-bottom: 20px;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
+  padding: 0 20px 20px;
+
+
   border-bottom: 1px solid #e5e5e5;
 }
 
 .gallery__description-name {
-  color: #000000;
-  line-height: 26px;
-  font-weight: bold;
-  text-transform: uppercase;
   margin-bottom: 10px;
-  margin-top: 20px
+  font-size: 14px;
+
+  font-weight: bold;
+  line-height: 14px;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 .gallery__description-author {
@@ -38,9 +51,11 @@
 
 .description__likes-amount {
   position: relative;
+
+  padding-left: 40px;
+
   font-weight: bold;
   color: #000000;
-  padding-left: 40px
 }
 
 .description__likes-amount::before {
@@ -48,12 +63,22 @@
   position: absolute;
   top: -5px;
   left: 0;
+
   width: 23px;
   height: 21px;
+
   background: url(../img/icon-like.svg) no-repeat center;
 }
 
 .gallery__title-wrap--2 {
-  padding-top: 10px;
+  padding: 0 25px;
+  margin: 15px;
   border: none;
+}
+
+//
+
+.gallery__player-screen {
+  height: 200px;
+  background: url(../img/video-mobile@1x.jpg) no-repeat center;
 }

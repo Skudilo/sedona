@@ -1,3 +1,29 @@
-// .main-nav {
-//   display: none;
-// }
+.main-nav {
+  position: relative;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 18.5px;
+  width: 100%;
+  background-color: #81b3d2;
+  text-align: center;
+  border-bottom: 1px solid #678fa8;
+  border-top: 1px solid #9ac2db;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  &:first-child {
+    border-top: none
+  }
+  &:hover {
+    background-color: #669ec0;
+    border-color: transparent;
+  }
+  &:active {
+    color: rgba(256,256,256, 0.3);
+    background-color: #5496bd;
+  }
+}
