@@ -27,3 +27,36 @@
     background-color: #5496bd;
   }
 }
+
+@media(min-width: 770px) {
+  .main-nav {
+    width: 770px;
+    display: flex;
+    padding: 15px;
+    position: static;
+    justify-content: space-around;
+  }
+
+  .main-nav__item {
+    width: 154px;
+  }
+
+  .main-nav__item-empty {
+    width: 154px;
+  }
+
+  .main-nav__link {
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    font-size: 14px;
+    &:hover {
+      color: #81b3d2;
+      background: none;
+    }
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}

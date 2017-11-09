@@ -19,6 +19,7 @@
       <li class="main-nav__item">
         <a href="photo.html" class="main-nav__link">Фото и видео</a>
       </li>
+      <li class="main-nav__item-empty"></li>
       <li class="main-nav__item">
         <a href="form.html" class="main-nav__link">Форма отзыва</a>
       </li>
@@ -38,7 +39,7 @@
     <section class="advantages">
       <h2 class="visually-hidden">Седона круче чем гранд каньон!main</h2>
       <div class="advantages__title-wrap">
-        <h2 class="advantages__title-main">СЕДОНА — небольшой <br> городок в Аризоне, заслуживающий большего!</h2>
+        <h2 class="advantages__title-main">СЕДОНА — небольшой <br class="advantages__title-main-br"> городок в Аризоне, заслуживающий большего!</h2>
         <p class="advantages__title-text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
       </div>
       <div class="advantages__wrap-1">
@@ -47,9 +48,11 @@
           <p class="advantages__number">#1</p>
           <p class="advantages__text">СЕДОНА НЕ АТтРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
         </div>
-        <div class="advantages-photo">
-          <img src="img/main-city-mobile@1x.jpg" alt="фото города" width="320" height="260">
-        </div>
+        <picture class="advantages__photo">
+          <source media="(min-width: 1280px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+          <source media="(min-width: 770px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+          <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="фото города" >
+        </picture>
       </div>
       <div class="advantages__wrap-2">
         <div class="advantages__item advantages__item--house">
@@ -71,9 +74,11 @@
           <p class="advantages__number">#2</p>
           <p class="advantages__text advantages__text--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         </div>
-        <div class="advantages-photo">
-          <img src="img/main-bridge-mobile@1x.jpg" alt="Мост Дьявола" width="320" height="260">
-        </div>
+        <picture class="advantages__photo">
+          <source media="(min-width: 1280px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+          <source media="(min-width: 770px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+          <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="фото города" >
+        </picture>
       </div>
       <div class="advantages__wrap-4">
         <div class="advantages__item-grey">
@@ -96,13 +101,16 @@
     <section class="search">
       <h2 class="visually-hidden">Поиск гостиницы</h2>
       <div class="search__title-wrap">
-        <h2 class="search-title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
-        <p class="search__title-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <h2 class="search__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
+        <p class="search__title-text">Укажите предполагаемые даты поездки,<br class="search__br-tablet"> и мы покажем вам лучшие предложения гостиниц в седоне</p>
       </div>
-      <a class="btn" href="#">НАЙТИ гостиницу</a>
+      <a class="search__btn btn" href="#">НАЙТИ гостиницу</a>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
+      <source media="(min-width: 1280px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+      <source media="(min-width: 770px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+      <img src="img/main-bridge-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="фото города" >
         <img src="img/bg-map-mobile@1x.jpg" alt="" width="320" height="350">
     </section>
   </main>
