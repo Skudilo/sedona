@@ -153,7 +153,6 @@ ul {
   width: 320px;
   height: 160px;
   margin: 0 auto;
-  margin-top: -35px;
   background-color: #767e83;
   background-image: url(../img/bg-intro-triangle-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
@@ -161,8 +160,12 @@ ul {
   background-size: cover, auto;
 }
 .page-intro--main {
+  margin-top: -35px;
   height: 386px;
   background-size: cover;
+}
+.page-intro__img {
+  width: 280px;
 }
 @media (min-width: 770px) {
   .page-intro {
@@ -172,6 +175,9 @@ ul {
     margin-top: 0;
     height: 517px;
     background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
+  }
+  .page-intro__img {
+    width: 460px;
   }
 }
 .advantages {
@@ -409,6 +415,11 @@ ul {
   width: 320px;
   margin: 0 auto;
 }
+@media (min-width: 770px) {
+  .map {
+    width: 770px;
+  }
+}
 .page-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -546,6 +557,83 @@ ul {
 .gallery__player-screen {
   height: 200px;
   background: url(../img/video-mobile@1x.jpg) no-repeat center;
+}
+.gallery__player-controls {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 23px;
+  position: relative;
+  height: 66px;
+  background-color: #f2f2f2;
+}
+.gallery__player-bar {
+  width: 280px;
+  height: 45px;
+  position: absolute;
+  top: -45px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.gallery__player-bar::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  height: 3px;
+  width: 235px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.gallery__player-bar::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 58px;
+  height: 9px;
+  width: 9px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.gallery__player-button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+.gallery__player-button--1 {
+  margin-left: 25px;
+  width: 16px;
+}
+.gallery__player-button--2 {
+  margin-left: 133px;
+  width: 32px;
+}
+.gallery__player-button--3 {
+  margin-left: 31px;
+  width: 20px;
+}
+.gallery__player-button-icon {
+  fill: red;
+}
+@media (min-width: 770px) {
+  .gallery {
+    width: 648px;
+  }
+  .gallery__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .gallery__post {
+    width: 324px;
+    padding: 0;
+  }
+  .gallery__post--prime {
+    width: 648px;
+  }
 }
 .review {
   width: 320px;
