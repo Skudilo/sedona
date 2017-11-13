@@ -60,13 +60,17 @@
       </li>
     </ul>
     <a href="#" class="page-header__logo">
-      <img src="img/logo-sedona-mobile.svg" alt="логотип">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 770px)" srcset="img/logo-sedona-tablet.svg">
+        <img src="img/logo-sedona-mobile.svg" alt="логотип">
+      </picture>
     </a>
   </header>
   <main>
     <h1 class="visually-hidden">Город Седона</h1>
     <div class="page-intro page-intro--main">
-      <img class="page-intro__img" src="img/text-sedona-index.svg" alt="приветсвенный текст">
+      <img class="page-intro__text" src="img/text-sedona-index.svg" alt="приветсвенный текст">
     </div>
     <section class="advantages">
       <h2 class="visually-hidden">Седона круче чем гранд каньон!main</h2>
@@ -80,11 +84,13 @@
           <p class="advantages__number">— №1 —</p>
           <p class="advantages__text">СЕДОНА НЕ АТтРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
         </div>
-        <picture class="advantages__photo">
-          <source media="(min-width: 1280px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
-          <source media="(min-width: 770px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
-          <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="фото города">
-        </picture>
+        <div class="advantages__photo-wrap">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+            <source media="(min-width: 770px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+            <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="фото города" width="800" height="256px">
+          </picture>
+        </div>
       </div>
       <div class="advantages__wrap-2">
         <div class="advantages__item advantages__item--house">
@@ -106,11 +112,13 @@
           <p class="advantages__number">— №2 —</p>
           <p class="advantages__text advantages__text--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         </div>
-        <picture class="advantages__photo">
-          <source media="(min-width: 1280px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
-          <source media="(min-width: 770px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-          <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="фото города">
-        </picture>
+        <div class="advantages__photo-wrap">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 770px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+            <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="фото города">
+          </picture>
+        </div>
       </div>
       <div class="advantages__wrap-4">
         <div class="advantages__item-grey">
@@ -141,7 +149,7 @@
     <section class="map">
       <picture class="map_photo">
         <h2 class="visually-hidden">Карта</h2>
-        <source media="(min-width: 1280px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+        <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
         <source media="(min-width: 770px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
         <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="фото города">
       </picture>

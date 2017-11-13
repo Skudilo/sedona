@@ -10,14 +10,19 @@
   font-style: normal;
   src: url("fonts/ptsansbold.woff2") format("woff2"), url("fonts/ptsansbold.woff") format("woff");
 }
+html {
+  background-color: #f2f2f2;
+}
 body {
   min-width: 320px;
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0;
   font-size: 14px;
   line-height: 21px;
   font-family: "PT Sans", sans-serif;
   color: #333333;
+  background-color: #ffffff;
 }
 .visually-hidden {
   position: absolute;
@@ -78,6 +83,15 @@ ul {
     top: 0;
     left: 334px;
     margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header {
+    width: 1200px;
+    height: 45px;
+  }
+  .page-header__logo {
+    left: 506px;
   }
 }
 .main-nav {
@@ -141,16 +155,18 @@ ul {
     color: rgba(0, 0, 0, 0.3);
   }
 }
+@media (min-width: 1200px) {
+  .main-nav {
+    width: 1200px;
+  }
+  .main-nav__item-empty {
+    width: 188px;
+  }
+}
 .page-intro {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: block;
+  text-align: center;
+  padding-top: 90px;
   width: 320px;
   height: 160px;
   margin: 0 auto;
@@ -158,25 +174,43 @@ ul {
   background-image: url(../img/bg-intro-triangle-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: cover, auto;
+  background-size: auto, cover;
 }
 .page-intro--main {
   margin-top: -35px;
   height: 386px;
-  background-size: cover;
+  background-size: auto, cover;
 }
-.page-intro__img {
+.page-intro__text {
   width: 280px;
 }
 @media (min-width: 770px) {
   .page-intro {
+    background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
     width: 770px;
+    height: 290px;
+    padding-top: 77px;
   }
   .page-intro--main {
     margin-top: 0;
     height: 517px;
     background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
-    background-size: auto;
+    background-size: auto, cover;
+  }
+  .page-intro__text {
+    width: 460px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-intro {
+    width: 1200px;
+    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
+  }
+  .page-intro--main {
+    margin-top: 0;
+    height: 517px;
+    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
+    background-size: auto, cover;
   }
   .page-intro__img {
     width: 460px;
@@ -235,7 +269,8 @@ ul {
 .advantages__wrap-2 {
   padding: 40px 0 15px 70px;
 }
-.advantages__photo {
+.advantages__photo-wrap {
+  display: block;
   width: 320px;
   height: 256px;
 }
@@ -246,7 +281,7 @@ ul {
 .advantages__item::before {
   content: "";
   position: absolute;
-  background: red;
+  left: 50%;
 }
 .advantages__item--house::before {
   left: -50px;
@@ -323,7 +358,7 @@ ul {
     width: 256px;
     height: 256px;
   }
-  .advantages__photo {
+  .advantages__photo-wrap {
     width: 512px;
     height: 256px;
   }
@@ -390,6 +425,33 @@ ul {
     padding: 45px 49px 35px;
   }
 }
+@media (min-width: 1200px) {
+  .advantages {
+    width: 1200px;
+  }
+  .advantages__item-blue {
+    width: 400px;
+  }
+  .advantages__photo-wrap {
+    width: 800px;
+    height: 256px;
+  }
+  .advantages__item {
+    width: 400px;
+  }
+  .advantages__item--house::before {
+    left: 161px;
+  }
+  .advantages__item--food::before {
+    left: 161px;
+  }
+  .advantages__item--gift::before {
+    left: 165px;
+  }
+  .advantages__item-grey {
+    width: 400px;
+  }
+}
 .search {
   width: 320px;
   margin: 0 auto;
@@ -438,6 +500,11 @@ ul {
 @media (min-width: 770px) {
   .map {
     width: 770px;
+  }
+}
+@media (min-width: 1200px) {
+  .map {
+    width: 1200px;
   }
 }
 .page-footer {
@@ -536,6 +603,13 @@ ul {
   }
   .page-footer__social {
     margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .page-footer {
+    padding-left: 130px;
+    padding-right: 40px;
+    width: 1200px;
   }
 }
 .gallery {
@@ -675,7 +749,31 @@ ul {
     border: 0;
   }
   .gallery__post--prime {
+    width: 100%;
+  }
+  .gallery__player-screen {
+    height: 500px;
+    background: url(../img/video-tablet@1x.jpg) no-repeat center;
+  }
+  .gallery__player-controls {
     width: 648px;
+  }
+  .gallery__player-bar {
+    width: 100%;
+  }
+  .gallery__player-bar::before {
+    width: 390px;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery {
+    width: 1200px;
+  }
+  .gallery__post {
+    width: 400px;
+  }
+  .gallery__post--prime {
+    width: 100%;
   }
 }
 .review {

@@ -1,7 +1,7 @@
 .page-intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  text-align: center;
+  padding-top: 90px;
   width: 320px;
   height: 160px;
   margin: 0 auto;
@@ -9,28 +9,49 @@
   background-image: url(../img/bg-intro-triangle-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: cover, auto;
+  background-size: auto, cover;
 }
 
 .page-intro--main {
   margin-top: -35px;
   height: 386px;
-  background-size: cover;
+  background-size:auto, cover;
 }
 
-.page-intro__img {
+.page-intro__text {
   width: 280px;
 }
 
 @media (min-width: 770px) {
   .page-intro {
-    width: 770px
+    background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
+    width: 770px;
+    height: 290px;
+    padding-top: 77px;
   }
   .page-intro--main{
     margin-top: 0;
     height: 517px;
     background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
-    background-size: auto;
+    background-size: auto, cover;
+  }
+
+  .page-intro__text {
+    width: 460px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-intro {
+    width: 1200px;
+    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
+  }
+
+  .page-intro--main{
+    margin-top: 0;
+    height: 517px;
+    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
+    background-size: auto, cover;
   }
 
   .page-intro__img {

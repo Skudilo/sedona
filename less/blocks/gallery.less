@@ -161,6 +161,36 @@
   }
 
   .gallery__post--prime {
+    width: 100%;
+  }
+
+  .gallery__player-screen {
+    height: 500px;
+    background: url(../img/video-tablet@1x.jpg) no-repeat center;
+  }
+
+  .gallery__player-controls {
     width: 648px;
+  }
+
+  .gallery__player-bar {
+    width: 100%;
+    &::before {
+      width:390px
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery {
+    width: 1200px;
+  }
+
+  .gallery__post {
+    width: 400px;
+  }
+
+  .gallery__post--prime {
+    width: 100%;
   }
 }
