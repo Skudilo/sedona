@@ -114,10 +114,11 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 15px;
+    padding: 17px 0;
     position: static;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .main-nav__item {
     width: 154px;
@@ -175,6 +176,7 @@ ul {
     margin-top: 0;
     height: 517px;
     background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
+    background-size: auto;
   }
   .page-intro__img {
     width: 460px;
@@ -235,7 +237,7 @@ ul {
 }
 .advantages__photo {
   width: 320px;
-  height: 260px;
+  height: 256px;
 }
 .advantages__item {
   position: relative;
@@ -286,22 +288,27 @@ ul {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 20px;
   height: 1px;
   width: 280px;
   background-color: #d6d6d6;
+}
+.advantages__br-tablet {
+  display: none;
 }
 @media (min-width: 770px) {
   .advantages {
     width: 770px;
   }
   .advantages__title-wrap {
+    padding-top: 50px;
     margin-bottom: 50px;
   }
-  .advantages__title-main-br {
+  .advantages__br-mobile {
     display: none;
   }
   .advantages__title-main {
+    font-size: 21px;
     width: 450px;
     margin: 0 auto 30px;
   }
@@ -311,7 +318,7 @@ ul {
     display: flex;
   }
   .advantages__item-blue {
-    padding-top: 40px;
+    padding: 45px;
     background-image: none;
     width: 256px;
     height: 256px;
@@ -324,7 +331,7 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 120px 0 60px;
+    padding: 115px 0 20px;
   }
   .advantages__title {
     font-size: 21px;
@@ -333,25 +340,30 @@ ul {
   .advantages__item {
     width: 256px;
     text-align: center;
-    padding: 45px;
+    padding: 45px 45px 0;
+  }
+  .advantages__item--gift {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .advantages__item--house::before {
     width: 75px;
     height: 72px;
     left: 90px;
-    top: -70px;
+    top: -55px;
   }
   .advantages__item--food::before {
     width: 77px;
     height: 69px;
     left: 90px;
-    top: -70px;
+    top: -55px;
   }
   .advantages__item--gift::before {
     width: 64px;
     height: 76px;
-    left: 90px;
-    top: -70px;
+    left: 95px;
+    top: -60px;
   }
   .advantages__wrap-3 {
     display: -webkit-box;
@@ -362,7 +374,10 @@ ul {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    padding: 40px 30px 0;
+    padding: 45px 45px 0;
+  }
+  .advantages__br-tablet {
+    display: inline;
   }
   .advantages__wrap-4 {
     display: -webkit-box;
@@ -372,7 +387,7 @@ ul {
   .advantages__item-grey {
     width: 256px;
     border: none;
-    padding: 40px;
+    padding: 45px 49px 35px;
   }
 }
 .search {
@@ -397,15 +412,20 @@ ul {
 @media (min-width: 770px) {
   .search {
     width: 770px;
+    padding-top: 35px;
     padding-left: 160px ;
     padding-right: 160px ;
+    padding-bottom: 60px;
   }
   .search__br-tablet {
     display: inline;
   }
   .search__title {
     font-size: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+  }
+  .search__title-text {
+    margin-bottom: 40px;
   }
   .search__btn {
     width: 460px;
@@ -495,6 +515,28 @@ ul {
   fill: #000000;
   width: 100%;
   height: auto;
+}
+@media (min-width: 770px) {
+  .page-footer {
+    padding: 30px 60px 25px;
+    width: 770px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-footer__hashtag {
+    margin: 0;
+  }
+  .page-footer__social {
+    margin: 0;
+  }
 }
 .gallery {
   width: 320px;
@@ -630,6 +672,7 @@ ul {
   .gallery__post {
     width: 324px;
     padding: 0;
+    border: 0;
   }
   .gallery__post--prime {
     width: 648px;
@@ -664,6 +707,20 @@ ul {
 }
 .review__title-text {
   line-height: 24px;
+}
+@media (min-width: 770px) {
+  .review {
+    width: 770px;
+  }
+  .review__title-wrap {
+    padding: 0 160px;
+  }
+  .review__title-wrap::before {
+    display: none;
+  }
+  .review__title {
+    font-size: 30px;
+  }
 }
 .form__fieldset-name {
   position: relative;
@@ -764,7 +821,15 @@ ul {
   margin-left: 20px;
   text-transform: uppercase;
 }
+.form__contacts-input-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .form__contacts-input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 58px;
   padding: 22px;
   font-weight: bold;
@@ -793,6 +858,17 @@ ul {
   font-weight: bold;
   font-size: 18px;
   color: #000000;
+}
+.form__contacts-input-icon {
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+}
+.form__contacts-input-icon--phone {
+  background: #e6e6e6 url(../img/icon-phone.svg) no-repeat center;
+}
+.form__contacts-input-icon--mail {
+  background: #e6e6e6 url(../img/icon-mail.svg) no-repeat center;
 }
 .form__fieldset-impression {
   position: relative;
@@ -940,4 +1016,64 @@ ul {
   font-weight: bold;
   font-size: 18px;
   color: #000000;
+}
+@media (min-width: 770px) {
+  .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 60px;
+  }
+  .form__fieldset-impression {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    width: 324px;
+  }
+  .form__fieldset-impression::before {
+    display: none;
+  }
+  .form__fieldset-name {
+    width: 324px;
+    border: none;
+  }
+  .form__fieldset-name::before {
+    display: none;
+  }
+  .form__name-input {
+    width: 100%;
+  }
+  .form__fieldset-contacts {
+    width: 100%;
+    border-top: 1px solid #dbdbdb;
+  }
+  .form__fieldset-contacts::before {
+    display: none;
+  }
+  .form__fieldset-title {
+    padding: 0 60px;
+  }
+  .form__fieldset-places {
+    width: 100%;
+    padding: 0 100px;
+  }
+  .form__fieldset-places::before {
+    display: none;
+  }
+  .form__places-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .form__fieldset-describe {
+    width: 100%;
+    border-top: 1px solid #dbdbdb;
+  }
 }

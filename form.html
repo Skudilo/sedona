@@ -51,6 +51,7 @@
       <li class="main-nav__item">
         <a href="photo.html" class="main-nav__link">Фото и видео</a>
       </li>
+      <li class="main-nav__item-empty"></li>
       <li class="main-nav__item">
         <a class="main-nav__link">Форма отзыва</a>
       </li>
@@ -90,14 +91,22 @@
         </fieldset>
         <fieldset class="form__fieldset-contacts">
           <legend class="form__fieldset-title">Контактная информация:</legend>
-          <p class="form__contacts-item">
-            <label class="form__contacts-label" for="tel">Контактный телефон*:</label>
-            <input class="form__contacts-input" type="text" id="tel" name="tel" placeholder="Введите телефон" required="">
-          </p>
-          <p class="form__contacts-item">
-            <label class="form__contacts-label" for="mail">Электронная почта*</label>
-            <input class="form__contacts-input" type="text" id="mail" name="mail" placeholder="Введите e-mail" required="">
-          </p>
+          <div class="form__contacts-wrap">
+            <p class="form__contacts-item">
+              <label class="form__contacts-label" for="tel">Контактный телефон*:</label>
+              <div class="form__contacts-input-wrap">
+                <input class="form__contacts-input form__contacts-input--1" type="text" id="tel" name="tel" placeholder="Введите телефон" required="">
+                <span class="form__contacts-input-icon form__contacts-input-icon--phone"></span>
+              </div>
+            </p>
+            <p class="form__contacts-item">
+              <label class="form__contacts-label" for="mail">Электронная почта*</label>
+              <div class="form__contacts-input-wrap">
+                <input class="form__contacts-input form__contacts-input--2" type="text" id="mail" name="mail" placeholder="Введите e-mail" required="">
+                <span class="form__contacts-input-icon form__contacts-input-icon--mail"></span>
+              </div>
+            </p>
+          </div>
         </fieldset>
         <fieldset class="form__fieldset-impression">
           <legend class="form__fieldset-title">ВАше Общее впечатление:</legend>
@@ -115,22 +124,28 @@
         </p></fieldset>
         <fieldset class="form__fieldset-places">
           <legend class="form__fieldset-title">посещенные достопримечательности:</legend>
-          <p class="form__places-item">
-            <input class="form__places-input" type="checkbox" id="btn-1" name="bridge" checked="">
-            <label class="form__places-label" for="btn-1">Мост Дьявола</label>
-          </p>
-          <p class="form__places-item">
-            <input class="form__places-input" type="checkbox" id="btn-2" name="park" checked="">
-            <label class="form__places-label" for="btn-1">Слайд-парк</label>
-          </p>
-          <p class="form__places-item">
-            <input class="form__places-input" type="checkbox" id="btn-3" name="rock bell">
-            <label class="form__places-label" for="btn-1"> Гора-Колокол</label>
-          </p>
-          <p class="form__places-item">
-            <input class="form__places-input" type="checkbox" id="btn-4" name="red rocks" checked="">
-            <label class="form__places-label" for="btn-1">Красные скалы</label>
-          </p>
+          <div class="form__places-wrap">
+            <div class="form_places-tablet-wrap">
+            <p class="form__places-item">
+              <input class="form__places-input" type="checkbox" id="btn-1" name="bridge" checked="">
+              <label class="form__places-label" for="btn-1">Мост Дьявола</label>
+            </p>
+            <p class="form__places-item">
+              <input class="form__places-input" type="checkbox" id="btn-2" name="park" checked="">
+              <label class="form__places-label" for="btn-1">Слайд-парк</label>
+            </p>
+            </div>
+            <div class="form_places-tablet-wrap">
+            <p class="form__places-item">
+              <input class="form__places-input" type="checkbox" id="btn-3" name="rock bell">
+              <label class="form__places-label" for="btn-1"> Гора-Колокол</label>
+            </p>
+            <p class="form__places-item">
+              <input class="form__places-input" type="checkbox" id="btn-4" name="red rocks" checked="">
+              <label class="form__places-label" for="btn-1">Красные скалы</label>
+            </p>
+            </div>
+            </div>
         </fieldset>
         <fieldset class="form__fieldset-describe">
           <legend class="form__fieldset-title">Опишите свои эмоции:</legend>
