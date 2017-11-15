@@ -1,9 +1,10 @@
+
 .form__fieldset-name {
   position: relative;
 
   margin: 0;
   margin-bottom: 15px;
-  padding: 7px 20px;
+  padding: 7px 0;
 
   border: none;
   &::before {
@@ -31,6 +32,7 @@
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .form__name-label {
@@ -64,7 +66,7 @@
 
   margin: 0;
   margin-bottom: 20px;
-  padding: 7px 20px 12px;
+  padding: 7px 0 12px;
 
   border: none;
   &::before {
@@ -136,7 +138,7 @@
 
   margin: 0;
   margin-bottom: 20px;
-  padding: 20px 20px 13px;
+  padding: 20px 0 13px;
 
   border: none;
   &::before {
@@ -209,7 +211,7 @@
 
   margin: 0;
   margin-bottom: 20px;
-  padding: 17px 20px 1px;
+  padding: 17px 0 1px;
 
   border: none;
   &::before {
@@ -278,7 +280,7 @@
 
 .form__fieldset-describe {
   margin: 0;
-  padding: 15px 20px;
+  padding: 15px 0;
 
   border: none;
 }
@@ -306,7 +308,6 @@
   .form {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 60px;
   }
 
   //
@@ -319,15 +320,25 @@
     }
   }
 
+  .form__fieldset-title--impression {
+    text-align: left;
+  }
+
   //
 
   .form__fieldset-name {
     width: 324px;
+    padding-left: 60px;
 
     border: none;
     &::before {
       display: none;
     }
+  }
+
+  .form__fieldset-title--name {
+    padding: 0;
+    text-align: left;
   }
 
   .form__name-input {
@@ -345,15 +356,15 @@
     }
   }
 
-  .form__fieldset-title {
+  .form__fieldset-title--contacts {
     padding: 0 60px;
   }
-
   //
 
   .form__fieldset-places {
     width: 100%;
     padding: 0 100px;
+    border-top: 1px solid #dbdbdb;
     &::before {
       display: none;
     }
@@ -365,9 +376,101 @@
     justify-content: space-between;
   }
 
+  .form__fieldset-title--places {
+    width: 400px;
+    padding: 0 60px;
+  }
+
+  //
+
   .form__fieldset-describe {
     width: 100%;
 
     border-top: 1px solid #dbdbdb;
+  }
+
+  .form__fieldset-title--describe {
+    padding: 0 60px
+  }
+
+  //
+
+  .form__btn-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__btn {
+    margin: 0;
+  }
+
+  .form__btn-hidden-text{
+
+  }
+}
+@media (min-width: 1200px) {
+  .form__fieldset-impression {
+    width: 50%;
+  }
+
+  .form__fieldset-title--impression {
+    padding-left: 80px;
+  }
+
+  //
+
+  .form__fieldset-name {
+    width: 50%;
+    padding-left: 80px;
+  }
+
+  //
+
+  .form__contacts-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__contacts-label-hiden {
+    display: none;
+  }
+
+  .form__contacts-label {
+    margin: 0;
+    margin-right: 15px;
+  }
+
+  .form__contacts-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  //
+
+  .form__fieldset-places {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form_places-tablet-wrap {
+    display: flex;
+    width: 480px;
+    &:nth-child(2) {
+      padding-left: 26px
+    }
+  }
+
+  .form__places-item {
+    &:first-child {
+      margin-right: 70px;
+    }
+  }
+
+  //
+
+  .form__btn {
+    width: 480px
   }
 }

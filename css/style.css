@@ -166,10 +166,11 @@ ul {
 .page-intro {
   display: block;
   text-align: center;
-  padding-top: 90px;
-  width: 320px;
+  width: 318px;
   height: 160px;
   margin: 0 auto;
+  margin-top: -35px;
+  padding-top: 50px;
   background-color: #767e83;
   background-image: url(../img/bg-intro-triangle-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
@@ -177,7 +178,7 @@ ul {
   background-size: auto, cover;
 }
 .page-intro--main {
-  margin-top: -35px;
+  padding-top: 90px;
   height: 386px;
   background-size: auto, cover;
 }
@@ -186,16 +187,14 @@ ul {
 }
 @media (min-width: 770px) {
   .page-intro {
+    margin-top: 0;
     background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
-    width: 770px;
+    width: 768px;
     height: 290px;
     padding-top: 77px;
   }
   .page-intro--main {
-    margin-top: 0;
     height: 517px;
-    background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
-    background-size: auto, cover;
   }
   .page-intro__text {
     width: 460px;
@@ -203,17 +202,9 @@ ul {
 }
 @media (min-width: 1200px) {
   .page-intro {
+    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
     width: 1200px;
-    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
-  }
-  .page-intro--main {
-    margin-top: 0;
-    height: 517px;
-    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
-    background-size: auto, cover;
-  }
-  .page-intro__img {
-    width: 460px;
+    padding-top: 77px;
   }
 }
 .advantages {
@@ -756,10 +747,13 @@ ul {
     background: url(../img/video-tablet@1x.jpg) no-repeat center;
   }
   .gallery__player-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 648px;
   }
   .gallery__player-bar {
-    width: 100%;
+    width: 400px;
   }
   .gallery__player-bar::before {
     width: 390px;
@@ -774,6 +768,13 @@ ul {
   }
   .gallery__post--prime {
     width: 100%;
+  }
+  .advantages__photo-wrap {
+    overflow: hidden;
+  }
+  .advantages__photo {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
   }
 }
 .review {
@@ -808,10 +809,12 @@ ul {
 }
 @media (min-width: 770px) {
   .review {
-    width: 770px;
+    width: 650px;
+    padding-top: 70px;
   }
   .review__title-wrap {
-    padding: 0 160px;
+    width: 450px;
+    margin: 0 auto;
   }
   .review__title-wrap::before {
     display: none;
@@ -820,11 +823,16 @@ ul {
     font-size: 30px;
   }
 }
+@media (min-width: 1200px) {
+  .review {
+    width: 960px;
+  }
+}
 .form__fieldset-name {
   position: relative;
   margin: 0;
   margin-bottom: 15px;
-  padding: 7px 20px;
+  padding: 7px 0;
   border: none;
 }
 .form__fieldset-name::before {
@@ -851,6 +859,7 @@ ul {
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
+  color: #000000;
 }
 .form__name-label {
   text-transform: uppercase;
@@ -893,7 +902,7 @@ ul {
   position: relative;
   margin: 0;
   margin-bottom: 20px;
-  padding: 7px 20px 12px;
+  padding: 7px 0 12px;
   border: none;
 }
 .form__fieldset-contacts::before {
@@ -972,7 +981,7 @@ ul {
   position: relative;
   margin: 0;
   margin-bottom: 20px;
-  padding: 20px 20px 13px;
+  padding: 20px 0 13px;
   border: none;
 }
 .form__fieldset-impression::before {
@@ -1028,7 +1037,7 @@ ul {
   position: relative;
   margin: 0;
   margin-bottom: 20px;
-  padding: 17px 20px 1px;
+  padding: 17px 0 1px;
   border: none;
 }
 .form__fieldset-places::before {
@@ -1081,7 +1090,7 @@ ul {
 }
 .form__fieldset-describe {
   margin: 0;
-  padding: 15px 20px;
+  padding: 15px 0;
   border: none;
 }
 .form__describe__textarea {
@@ -1122,7 +1131,6 @@ ul {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 0 60px;
   }
   .form__fieldset-impression {
     -webkit-box-ordinal-group: 0;
@@ -1133,12 +1141,20 @@ ul {
   .form__fieldset-impression::before {
     display: none;
   }
+  .form__fieldset-title--impression {
+    text-align: left;
+  }
   .form__fieldset-name {
     width: 324px;
+    padding-left: 60px;
     border: none;
   }
   .form__fieldset-name::before {
     display: none;
+  }
+  .form__fieldset-title--name {
+    padding: 0;
+    text-align: left;
   }
   .form__name-input {
     width: 100%;
@@ -1150,12 +1166,13 @@ ul {
   .form__fieldset-contacts::before {
     display: none;
   }
-  .form__fieldset-title {
+  .form__fieldset-title--contacts {
     padding: 0 60px;
   }
   .form__fieldset-places {
     width: 100%;
     padding: 0 100px;
+    border-top: 1px solid #dbdbdb;
   }
   .form__fieldset-places::before {
     display: none;
@@ -1170,8 +1187,85 @@ ul {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .form__fieldset-title--places {
+    width: 400px;
+    padding: 0 60px;
+  }
   .form__fieldset-describe {
     width: 100%;
     border-top: 1px solid #dbdbdb;
+  }
+  .form__fieldset-title--describe {
+    padding: 0 60px;
+  }
+  .form__btn-wrap {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form__btn {
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .form__fieldset-impression {
+    width: 50%;
+  }
+  .form__fieldset-title--impression {
+    padding-left: 80px;
+  }
+  .form__fieldset-name {
+    width: 50%;
+    padding-left: 80px;
+  }
+  .form__contacts-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .form__contacts-label-hiden {
+    display: none;
+  }
+  .form__contacts-label {
+    margin: 0;
+    margin-right: 15px;
+  }
+  .form__contacts-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form__fieldset-places {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .form_places-tablet-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 480px;
+  }
+  .form_places-tablet-wrap:nth-child(2) {
+    padding-left: 26px;
+  }
+  .form__places-item:first-child {
+    margin-right: 70px;
+  }
+  .form__btn {
+    width: 480px;
   }
 }

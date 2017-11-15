@@ -1,10 +1,12 @@
 .page-intro {
   display: block;
   text-align: center;
-  padding-top: 90px;
-  width: 320px;
+
+  width: 318px;
   height: 160px;
   margin: 0 auto;
+  margin-top: -35px;
+  padding-top: 50px;
   background-color: #767e83;
   background-image: url(../img/bg-intro-triangle-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
@@ -13,9 +15,9 @@
 }
 
 .page-intro--main {
-  margin-top: -35px;
+  padding-top: 90px;
   height: 386px;
-  background-size:auto, cover;
+  background-size: auto, cover;
 }
 
 .page-intro__text {
@@ -24,16 +26,14 @@
 
 @media (min-width: 770px) {
   .page-intro {
+    margin-top: 0;
     background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
-    width: 770px;
+    width: 768px;
     height: 290px;
     padding-top: 77px;
   }
   .page-intro--main{
-    margin-top: 0;
     height: 517px;
-    background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
-    background-size: auto, cover;
   }
 
   .page-intro__text {
@@ -43,18 +43,8 @@
 
 @media (min-width: 1200px) {
   .page-intro {
+    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
     width: 1200px;
-    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
-  }
-
-  .page-intro--main{
-    margin-top: 0;
-    height: 517px;
-    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
-    background-size: auto, cover;
-  }
-
-  .page-intro__img {
-    width: 460px;
+    padding-top: 77px;
   }
 }

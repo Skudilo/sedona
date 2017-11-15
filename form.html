@@ -75,13 +75,13 @@
       </div>
       <form class="form" action="#" method="post">
         <fieldset class="form__fieldset-name">
-          <legend class="form__fieldset-title">Представьтесь:</legend>
+          <legend class="form__fieldset-title form__fieldset-title--name">Представьтесь:</legend>
           <p class="form__name-item">
           <label class="form__name-label" for="name">ИМЯ*:</label>
           <input class="form__name-input" type="text" name="name" id="name" placeholder="Петр" required="">
           </p>
           <p class="form__name-item">
-          <label class="form__name-label" for="surname">ФАМИЛИЯ*:</label>
+          <label class="form__name-label  " for="surname">ФАМИЛИЯ*:</label>
           <input class="form__name-input" type="text" name="surname" id="surname" placeholder="Иванов" required="">
           </p>
           <p class="form__name-item">
@@ -90,26 +90,26 @@
           </p>
         </fieldset>
         <fieldset class="form__fieldset-contacts">
-          <legend class="form__fieldset-title">Контактная информация:</legend>
+          <legend class="form__fieldset-title form__fieldset-title--contacts">Контактная информация:</legend>
           <div class="form__contacts-wrap">
-            <p class="form__contacts-item">
-              <label class="form__contacts-label" for="tel">Контактный телефон*:</label>
+            <div class="form__contacts-item">
+              <label class="form__contacts-label" for="tel"><span class="form__contacts-label-hiden" >Контактный</span> телефон*:</label>
               <div class="form__contacts-input-wrap">
                 <input class="form__contacts-input form__contacts-input--1" type="text" id="tel" name="tel" placeholder="Введите телефон" required="">
                 <span class="form__contacts-input-icon form__contacts-input-icon--phone"></span>
               </div>
-            </p>
-            <p class="form__contacts-item">
+            </div>
+            <div class="form__contacts-item">
               <label class="form__contacts-label" for="mail">Электронная почта*</label>
               <div class="form__contacts-input-wrap">
                 <input class="form__contacts-input form__contacts-input--2" type="text" id="mail" name="mail" placeholder="Введите e-mail" required="">
                 <span class="form__contacts-input-icon form__contacts-input-icon--mail"></span>
               </div>
-            </p>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__fieldset-impression">
-          <legend class="form__fieldset-title">ВАше Общее впечатление:</legend>
+          <legend class="form__fieldset-title form__fieldset-title--impression">ВАше Общее впечатление:</legend>
           <p class="form__impression-item">
             <input class="form__impression-input" type="radio" id="btn-1" name="impression" checked="">
             <label class="form__impression-label" for="btn-1">Скорее положительное</label>
@@ -123,7 +123,7 @@
             <label class="form__impression-label" for="btn-3">Затрудняюсь ответить</label>
         </p></fieldset>
         <fieldset class="form__fieldset-places">
-          <legend class="form__fieldset-title">посещенные достопримечательности:</legend>
+          <legend class="form__fieldset-title form__fieldset-title--places">посещенные достопримечательности:</legend>
           <div class="form__places-wrap">
             <div class="form_places-tablet-wrap">
             <p class="form__places-item">
@@ -148,10 +148,13 @@
             </div>
         </fieldset>
         <fieldset class="form__fieldset-describe">
-          <legend class="form__fieldset-title">Опишите свои эмоции:</legend>
+          <legend class="form__fieldset-title form__fieldset-title--describe">Опишите свои эмоции:</legend>
           <textarea class="form__describe__textarea" name="textarea" placeholder="Опишите подробно все свои восторги "></textarea>
         </fieldset>
-        <button class="btn" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+        <div class="form__btn-wrap">
+          <button class="form__btn btn " type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+          <p class="form__btn-hidden-text">* — обязательные поля</p>
+        </div>
       </form>
     </div>
   </main>
