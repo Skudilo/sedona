@@ -664,6 +664,12 @@ ul {
 .gallery__player-screen {
   height: 200px;
   background: url(../img/video-mobile@1x.jpg) no-repeat center;
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5 dppx) {
+  .gallery__player-screen {
+    background-image: url(../img/video-mobile@2x.jpg);
+  }
 }
 .gallery__player-controls {
   width: 280px;
@@ -680,21 +686,18 @@ ul {
   top: -45px;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  padding: 22px;
 }
-.gallery__player-bar::before {
-  content: "";
-  position: absolute;
-  top: 22px;
-  left: 22px;
+.gallery__player-bar-line {
+  position: relative;
   height: 3px;
-  width: 235px;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.2);
 }
-.gallery__player-bar::after {
-  content: "";
+.gallery__player-bar-dot {
   position: absolute;
-  top: 19px;
-  left: 58px;
+  left: 20%;
+  top: -3px;
   height: 9px;
   width: 9px;
   background-color: #ffffff;
@@ -719,7 +722,7 @@ ul {
   width: 20px;
 }
 .gallery__player-button-icon {
-  fill: red;
+  fill: #5c6870;
 }
 @media (min-width: 770px) {
   .gallery {
@@ -742,21 +745,47 @@ ul {
   .gallery__post--prime {
     width: 100%;
   }
+  .gallery__player {
+    position: relative;
+  }
   .gallery__player-screen {
     height: 500px;
     background: url(../img/video-tablet@1x.jpg) no-repeat center;
+    background-size: 648px;
   }
   .gallery__player-controls {
+    padding-top: 0;
+    position: absolute;
+    bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 648px;
+    height: 93px;
+    background-color: rgba(0, 0, 0, 0.6);
   }
   .gallery__player-bar {
+    padding: 22px 0;
+    background-color: transparent;
+    position: static;
     width: 400px;
+    top: 0;
   }
-  .gallery__player-bar::before {
-    width: 390px;
+  .gallery__player-button-icon {
+    fill: #ffffff;
+  }
+  .gallery__player-button {
+    margin: 0;
+  }
+}
+@media (min-width: 770px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 770px) and (min-resolution: 144dpi), (min-width: 770px) and (min-resolution: 1.5 dppx) {
+  .gallery__player-screen {
+    background-image: url(../img/video-tablet@2x.jpg);
   }
 }
 @media (min-width: 1200px) {
@@ -775,6 +804,25 @@ ul {
   .advantages__photo {
     -webkit-transform: translateY(-70px);
             transform: translateY(-70px);
+  }
+  .gallery__player {
+    width: 800px;
+    margin: 0 auto;
+  }
+  .gallery__player-screen {
+    background: url(../img/video-desktop@1x.jpg) no-repeat center;
+    background-size: 800px;
+  }
+  .gallery__player-controls {
+    width: 800px;
+  }
+  .gallery__player-bar {
+    width: 550px;
+  }
+}
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5 dppx) {
+  .gallery__player-screen {
+    background-image: url(../img/video-desktop@2x.jpg);
   }
 }
 .review {

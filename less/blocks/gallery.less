@@ -81,6 +81,10 @@
 .gallery__player-screen {
   height: 200px;
   background: url(../img/video-mobile@1x.jpg) no-repeat center;
+  background-size: cover;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5 dppx) {
+    background-image: url(../img/video-mobile@2x.jpg)
+  }
 }
 
 .gallery__player-controls {
@@ -99,20 +103,17 @@
   top: -45px;
   left: 0;
   background-color: rgba(0,0,0,0.6);
-  &::before {
-    content: "";
-    position: absolute;
-    top: 22px;
-    left: 22px;
+  padding: 22px;
+  &-line {
+    position: relative;
     height: 3px;
-    width: 235px;
+    width: 100%;
     background-color: rgba(256,256,256,0.2);
   }
-  &::after {
-    content: "";
+  &-dot {
     position: absolute;
-    top: 19px;
-    left: 58px;
+    left: 20%;
+    top: -3px;
     height: 9px;
     width: 9px;
     background-color: #ffffff;
@@ -140,7 +141,7 @@
 }
 
 .gallery__player-button-icon {
-  fill: red
+  fill: #5c6870;
 }
 
 @media (min-width: 770px) {
@@ -164,21 +165,48 @@
     width: 100%;
   }
 
+  //
+
+  .gallery__player {
+
+    position: relative;
+  }
+
   .gallery__player-screen {
     height: 500px;
     background: url(../img/video-tablet@1x.jpg) no-repeat center;
+    background-size: 648px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5 dppx) {
+      background-image: url(../img/video-tablet@2x.jpg)
+    }
   }
 
   .gallery__player-controls {
+    padding-top: 0;
+    position: absolute;
+    bottom: 0;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 648px;
+    height: 93px;
+    background-color: rgba(0,0,0,0.6);
   }
 
   .gallery__player-bar {
+    padding: 22px 0;
+    background-color: transparent;
+    position: static;
     width: 400px;
-    &::before {
-      width:390px
-    }
+    top: 0;
+  }
+
+  .gallery__player-button-icon {
+    fill: #ffffff;
+  }
+
+  .gallery__player-button {
+    margin: 0;
   }
 }
 
@@ -201,5 +229,28 @@
 
   .advantages__photo {
     transform: translateY(-70px);
+  }
+
+  //
+
+  .gallery__player {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .gallery__player-screen {
+    background: url(../img/video-desktop@1x.jpg) no-repeat center;
+    background-size: 800px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5 dppx) {
+      background-image: url(../img/video-desktop@2x.jpg)
+    }
+  }
+
+  .gallery__player-controls {
+    width: 800px;
+  }
+
+  .gallery__player-bar {
+    width: 550px;
   }
 }
