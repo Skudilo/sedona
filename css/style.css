@@ -177,6 +177,11 @@ ul {
   background-position: bottom;
   background-size: auto, cover;
 }
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .page-intro {
+    background-image: url(../img/bg-intro-triangle-mobile.svg), url(../img/bg-back-mobile@2x.jpg);
+  }
+}
 .page-intro--main {
   padding-top: 90px;
   height: 386px;
@@ -200,11 +205,21 @@ ul {
     width: 460px;
   }
 }
+@media (min-width: 770px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 770px) and (min-resolution: 144dpi), (min-width: 770px) and (min-resolution: 1.5dppx) {
+  .page-intro {
+    background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@2x.jpg);
+  }
+}
 @media (min-width: 1200px) {
   .page-intro {
     background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
     width: 1200px;
     padding-top: 77px;
+  }
+}
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
+  .page-intro {
+    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@2x.jpg);
   }
 }
 .advantages {
@@ -414,6 +429,9 @@ ul {
     width: 256px;
     border: none;
     padding: 45px 49px 35px;
+  }
+  .advantages__item-grey::before {
+    display: none;
   }
 }
 @media (min-width: 1200px) {
